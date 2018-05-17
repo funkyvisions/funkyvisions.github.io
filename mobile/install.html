@@ -44,63 +44,6 @@
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/js/ratchet.min.js"></script>
-
-	<script>
-
-        var data = {
-            "dev": [
-                {
-                    "title": "Digby for iPhone v1.5.4",
-                    "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/j5r72o7hsmgqmc1/manifest.plist"
-                },
-                {
-                    "title": "Digby for Android v1.5.4",
-                    "url": "https://dl.dropboxusercontent.com/s/u5gbbmd2shgf2fm/Digby.apk"
-                },
-                {
-                    "title": "Digby for iPhone v1.4.2",
-                    "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/iqhwd49uxmazj33/manifest.plist"
-                },
-                {
-                    "title": "Digby for Android v1.4.2",
-                    "url": "https://dl.dropboxusercontent.com/s/sgxltmy7yl6cmg5/Digby.apk"
-                }
-            ],
-            "prod": [
-                {
-                    "title": "Digby for iPhone v1.5.4",
-                    "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/potb88huvm4l0ok/manifest.plist"
-                },
-                {
-                    "title": "Digby for Android v1.5.4",
-                    "url": "https://dl.dropboxusercontent.com/s/d9shxbmn36c1vk4/Digby.apk"
-                },
-                {
-                    "title": "Digby for iPhone v1.4.2",
-                    "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/82v2at05r2xoeni/manifest.plist"
-                },
-                {
-                    "title": "Digby for Android v1.4.2",
-                    "url": "https://dl.dropboxusercontent.com/s/2vdhoc7xd7flece/Digby.apk"
-                },
-                {
-                    "title": "Digby for Android v1.0.8",
-                    "url": "https://dl.dropboxusercontent.com/s/xbekpsyn0vzdvq1/Digby.apk"
-                }
-            ]
-        };
-
-	
-        $.each(data.dev, function(i, app) {
-            $("#dev-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-                + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-        });
-        $.each(data.prod, function(i, app) {
-            $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-                + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-        });
-
-	</script>
 </head>
 
 <body>
@@ -176,3 +119,57 @@
 </body>
 
 </html>
+
+<script>
+var data = {
+    "dev": [
+        {
+            "title": "Digby for iPhone v1.5.4",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/j5r72o7hsmgqmc1/manifest.plist"
+        },
+        {
+            "title": "Digby for Android v1.5.4",
+            "url": "https://dl.dropboxusercontent.com/s/u5gbbmd2shgf2fm/Digby.apk"
+        },
+        {
+            "title": "Digby for iPhone v1.4.2",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/iqhwd49uxmazj33/manifest.plist"
+        },
+        {
+            "title": "Digby for Android v1.4.2",
+            "url": "https://dl.dropboxusercontent.com/s/sgxltmy7yl6cmg5/Digby.apk"
+        }
+    ],
+    "prod": [
+        {
+            "title": "Digby for iPhone v1.5.4",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/potb88huvm4l0ok/manifest.plist"
+        },
+        {
+            "title": "Digby for Android v1.5.4",
+            "url": "https://dl.dropboxusercontent.com/s/d9shxbmn36c1vk4/Digby.apk"
+        },
+        {
+            "title": "Digby for iPhone v1.4.2",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/82v2at05r2xoeni/manifest.plist"
+        },
+        {
+            "title": "Digby for Android v1.4.2",
+            "url": "https://dl.dropboxusercontent.com/s/2vdhoc7xd7flece/Digby.apk"
+        },
+        {
+            "title": "Digby for Android v1.0.8",
+            "url": "https://dl.dropboxusercontent.com/s/xbekpsyn0vzdvq1/Digby.apk"
+        }
+    ]
+};
+
+$.each(data.dev, function(i, app) {
+    $("#dev-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+$.each(data.prod, function(i, app) {
+    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+</script>
